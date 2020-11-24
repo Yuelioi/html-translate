@@ -6,7 +6,7 @@ import os
 soup = BeautifulSoup(open('.html',encoding='utf-8'), features='html.parser') 
 list_source = soup.prettify().split('\n')
 
-#2 分割原始文档列表：需要翻译的部分与不需要翻译的部分（用的是for，有其他方法可以留言），类似[['1','hi'],[['2'],['hello']]的有序叠加列表
+#2 分割原始文档列表：需要翻译的部分与不需要翻译的部分（用的是for，有其他方法可以留言），类似[['1','hi'],[['2','hello']]的有序叠加列表，方便#5排序）
 tran_list = [] #要翻译的列表
 noTran_list = [] #不要翻译的列表
 all_list = [] #所有内容组成的列表
